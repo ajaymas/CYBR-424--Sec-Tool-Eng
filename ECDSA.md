@@ -98,5 +98,3 @@ base64 -d signature.b64 > signature.bin
 
 ECDSA is efficient and widely used in security protocols like TLS, SSH, and cryptocurrencies. Using `openssl`, we generated keys, signed a message, and verified the signature on Linux.
 
-Would you like to automate these steps using a shell script? 🚀
-
