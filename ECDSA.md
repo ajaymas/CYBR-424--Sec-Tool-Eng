@@ -98,3 +98,124 @@ base64 -d signature.b64 > signature.bin
 
 ECDSA is efficient and widely used in security protocols like TLS, SSH, and cryptocurrencies. Using `openssl`, we generated keys, signed a message, and verified the signature on Linux.
 
+
+## Elliptic Curve Digital Signature Algorithm (ECDSA)
+
+ECDSA is a cryptographic algorithm used to ensure authenticity and integrity in digital communications. It operates on elliptic curve cryptography, offering strong security with smaller key sizes.
+
+## Signature Generation Steps
+
+Given:
+
+- Domain parameters: (p, a, b, G, n, h), where G is the generator point on the elliptic curve.
+- Private key: d.
+- Message: m.
+
+### Step 1: Select a Random Number
+
+Choose a random integer k, where 1 ≤ k ≤ n − 1.
+
+### Step 2: Compute kG
+
+Multiply the generator point G by k to obtain:
+kG = (x1, y1)
+
+### Step 3: Compute r
+
+Convert x1 to an integer and compute:
+r = x1 mod n
+
+If r = 0, choose another k.
+
+### Step 4: Compute the Hash of the Message
+
+Calculate the hash of the message:
+e = HASH(m)
+
+For example, SHA-256 is commonly used.
+
+### Step 5: Compute s
+
+Compute:
+s = k⁻¹ (e + d * r) mod n
+
+where k⁻¹ is the modular inverse of k modulo n.
+
+### Step 6: Output the Signature
+
+The digital signature is:
+(r, s)
+
+## Example Calculation
+
+Let's assume:
+
+- n = 23 (a small prime for demonstration).
+- G = (5, 19) is a known generator point.
+- d = 7 (private key).
+- k = 3 (random number).
+- e = HASH(m) = 9.
+
+### Step 1: Compute kG
+
+Assume:
+3G = (10, 4)
+
+Thus, x1 = 10.
+
+### Step 2: Compute r
+
+r = 10 mod 23 = 10
+
+### Step 3: Compute k⁻¹ mod n
+
+Since k = 3:
+3⁻¹ mod 23 = 8
+
+### Step 4: Compute s
+
+s = 8 × (9 + 7 × 10) mod 23  
+s = 8 × (9 + 70) mod 23  
+s = 8 × 79 mod 23  
+s = 632 mod 23 = 11
+
+Thus, the signature is (r, s) = (10, 11).
+
+## Signature Verification
+
+At the receiver’s end, the signature is verified as follows:
+
+### Step 1: Check r, s Range
+
+Verify whether r, s belong to [1, n − 1].
+
+Since r = 10 and s = 11, both are valid.
+
+### Step 2: Compute e
+
+e = HASH(m) = 9
+
+### Step 3: Compute w
+
+w = s⁻¹ mod n
+
+Since s = 11:
+11⁻¹ mod 23 = 21
+
+### Step 4: Compute u₁, u₂
+
+u₁ = e * w mod n = 9 * 21 mod 23 = 189 mod 23 = 5  
+u₂ = r * w mod n = 10 * 21 mod 23 = 210 mod 23 = 3
+
+### Step 5: Compute (x1', y1')
+
+Assume:
+5G = (12, 7), 3Q = (10, 4)
+
+Adding points:
+(12, 7) + (10, 4) = (10, y1')
+
+### Step 6: Check Validity
+
+Since x1' = 10 and r = 10, the signature is valid.
+
