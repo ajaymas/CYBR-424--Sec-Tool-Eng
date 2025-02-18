@@ -99,7 +99,7 @@ base64 -d signature.b64 > signature.bin
 ECDSA is efficient and widely used in security protocols like TLS, SSH, and cryptocurrencies. Using `openssl`, we generated keys, signed a message, and verified the signature on Linux.
 
 
-## Elliptic Curve Digital Signature Algorithm (ECDSA)
+## Elliptic Curve Digital Signature Algorithm (ECDSA) Algorithm and Exmaples
 
 ECDSA is a cryptographic algorithm used to ensure authenticity and integrity in digital communications. It operates on elliptic curve cryptography, offering strong security with smaller key sizes.
 
