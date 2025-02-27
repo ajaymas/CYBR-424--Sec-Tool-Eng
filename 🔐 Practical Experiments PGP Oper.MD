@@ -186,7 +186,7 @@ sub   rsa4096 2025-02-27 [E] [expires: 2026-02-27]
 ## Step 9: Export Your Public Key (Optional)
 If you need to share your **public key**, use:
 ```bash
-gpg --armor --export ajay@example.com
+gpg --armor --export billgates@example.com
 ```
 **Expected Output:**
 ```
@@ -249,7 +249,7 @@ This is your **public key** that others can use to encrypt messages for you.
 ## Step 10: Backup Your Private Key (Optional)
 To export and back up your **private key**, use:
 ```bash
-gpg --armor --export-secret-key ajay@example.com > my_private_key.asc
+gpg --armor --export-secret-key billgates@example.com > my_private_key.asc
 ```
 Store this file securely, as it is required for decryption.
 
