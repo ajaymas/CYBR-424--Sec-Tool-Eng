@@ -167,12 +167,18 @@ gpg --list-keys
 ```
 **Expected Output:**
 ```
-/home/user/.gnupg/pubring.kbx
----------------------------------
-pub   rsa4096 2025-02-26 [SC]
-      ABCD1234567890ABCDEF1234567890ABCDEF1234
-uid           [ultimate] Ajay Kumara (Research Key) <ajay@example.com>
-sub   rsa4096 2025-02-26 [E]
+/home/remnux/.gnupg/pubring.kbx
+-------------------------------
+pub   rsa4096 2025-02-25 [SC]
+      D34F9FE72988136EDA323CA86B7286AD91E90658
+uid           [ultimate] Ajay kumara (Research key) <ajay.kumara@gmail.com>
+sub   rsa4096 2025-02-25 [E]
+
+pub   rsa4096 2025-02-27 [SC] [expires: 2026-02-27]
+      688AD85073241590217B2506D4F6A4797B5E339A
+uid           [ultimate] Bill gates (Research Key) <billgates@example.com>
+sub   rsa4096 2025-02-27 [E] [expires: 2026-02-27]
+
 ```
 
 ---
