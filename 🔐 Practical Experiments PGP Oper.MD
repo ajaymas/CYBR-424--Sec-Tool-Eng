@@ -264,58 +264,7 @@ This completes the **PGP key generation process** in Linux! 🚀
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2. **Select the key type:**
- ```bash
-   Please select what kind of key you want:
-   (1) RSA and RSA (default)
-   (2) DSA and Elgamal
-   (3) DSA (sign only)
-   (4) RSA (sign only)
-   (5) ECC (sign and encrypt)
-   (6) ECC (sign only)
-   (7) ECC (encrypt only)
-   (8) RSA (encrypt only)
-   (9) Existing key
-Your selection?
-    ```
-    - When prompted, select the key type. For most users, **RSA** is the recommended choice. Choose **1** to select the RSA option.
-
-3. **Choose the key size:**
-    - Next, you will be asked to choose the key size. For stronger encryption, select **4096 bits** by typing **4096**. This is the recommended size for enhanced security.
-
-4. **Set expiration date:**
-    - You will then be prompted to set an expiration date for the key. You can either set a specific expiration date or choose **0** to keep it valid indefinitely.
-
-5. **Enter your name and email:**
-    - Provide your name and email address when prompted. This is how others will identify you when verifying your PGP key.
-
-6. **Add an optional comment:**
-    - You can enter an optional comment (e.g., your organization or purpose for the key) or leave it blank.
-
-7. **Set a strong passphrase:**
-    - Finally, set a strong passphrase to protect your private key. Make sure the passphrase is secure and not easily guessable.
-
-After completing these steps, your PGP key pair (private and public keys) will be generated and stored in your keyring.
-```
-
-Experiment 1: PGP Authentication (Digital Signature)
+## Experiment 1: PGP Authentication (Digital Signature)
 Objective
 Verify message authenticity using SHA-1 hashing and RSA digital signatures.
 
