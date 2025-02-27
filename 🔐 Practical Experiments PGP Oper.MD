@@ -108,14 +108,14 @@ GnuPG needs to construct a user ID to identify your key.
 Real name: 
 ```
 **Action:**  
-Type your **full name** (e.g., `Ajay Kumara`) and press `Enter`.
+Type your **full name** (e.g., `Bob`) and press `Enter`.
 
 **Expected Prompt:**
 ```
 Email address: 
 ```
 **Action:**  
-Type your **email address** (e.g., `ajay@example.com`) and press `Enter`.
+Type your **email address** (e.g., `bob@example.com`) and press `Enter`.
 
 **Expected Prompt:**
 ```
@@ -130,7 +130,7 @@ You can enter a **comment** (e.g., `Research Key`) or **leave it blank** by pres
 **Expected Prompt:**
 ```
 You selected this USER-ID:
-    "Ajay Kumara (Research Key) <ajay@example.com>"
+    "Bob (Research Key) <bob@example.com>"
 
 Change (N)ame, (C)omment, (E)mail, or (O)kay/(Q)uit? 
 ```
