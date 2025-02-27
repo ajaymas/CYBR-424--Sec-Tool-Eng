@@ -33,7 +33,7 @@ Generate a **PGP key pair** (private & public keys):
 
 ## This step will guide you through generating a PGP key pair, which includes both a private key and a public key.
 
-## ## Step 1: Run the following command to generate the PGP key pair:**
+## Step 1: Run the following command to generate the PGP key pair:**
 
     ```bash
     gpg --full-generate-key
