@@ -135,7 +135,7 @@ You selected this USER-ID:
 Change (N)ame, (C)omment, (E)mail, or (O)kay/(Q)uit? 
 ```
 **Action:**  
-Type `O` and press `Enter` to proceed.
+Type `O` or letter O not Zero and press `Enter` to proceed.
 
 ---
 
@@ -145,7 +145,7 @@ Type `O` and press `Enter` to proceed.
 Enter passphrase:
 ```
 **Action:**  
-Type a **strong passphrase** (it will not be visible as you type), then press `Enter`.
+Type a **strong passphrase** (it will not be visible as you type example `abcd1234` enter before time out maximum 5 sec), then press `Enter`.
 
 **Expected Prompt:**
 ```
