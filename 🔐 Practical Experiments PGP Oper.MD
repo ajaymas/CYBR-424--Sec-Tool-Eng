@@ -350,7 +350,7 @@ gpg: Signature made Thu 27 Feb 2025 12:09:46 AM EST
 gpg:                using RSA key 688AD85073241590217B2506D4F6A4797B5E339A
 gpg: Good signature from "Bill gates (Research Key) <billgates@example.com>" [ultimate]
 
-``
+```
 - **Reason:** Decrypts using the receiver’s private key and verifies the sender's signature.
 - The message `Confidential Email Content` recovered from the decryption process
 
