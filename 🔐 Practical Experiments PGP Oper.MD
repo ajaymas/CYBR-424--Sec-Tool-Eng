@@ -263,7 +263,7 @@ Store this file securely, as it is required for decryption.
 This completes the **PGP key generation process** in Linux! 🚀
 
 
-Now, it's time to generate the private and public keys for the receiver. However, keep the receiver's public key in the sender's public key ring (Bill Gates).
+Now, it's time to generate the private and public keys for the receiver(example ajayk and his email will be used as ajayk@gmail.com). However, keep the receiver's public key in the sender's public key ring (Bill Gates).
 
 To do this, repeat steps 1 to 8, but in step 9, follow these commands below in step 9 to store the receiver's public key information in a sender (Bill Gates publick keyring):
 
@@ -324,7 +324,7 @@ echo "Confidential Email Content" | gpg --clearsign -a
 #### 5. Encrypt an Email Message
 
 ```bash
-echo "Confidential Email Content" | gpg --encrypt --sign --armor -r receiver@example.com
+echo "Confidential Email Content" | gpg --encrypt --sign --armor -r ajayk@example.com > encrypted_email.asc
 ```
 
 - `--encrypt` → Encrypts data.
@@ -339,15 +339,20 @@ Receiver executes:
 ```bash
 gpg --decrypt encrypted_email.asc
 ```
+You will see the decrypted confidential message below.
 
+```
+remnux@remnux:~/Desktop/PGP$ gpg --decrypt encrypted_email.asc
+gpg: encrypted with 4096-bit RSA key, ID C50E055ADF0404C4, created 2025-02-27
+      "ajayk (I will get email from Bill gates) <ajayk@gmail.com>"
+Confidential Email Content
+gpg: Signature made Thu 27 Feb 2025 12:09:46 AM EST
+gpg:                using RSA key 688AD85073241590217B2506D4F6A4797B5E339A
+gpg: Good signature from "Bill gates (Research Key) <billgates@example.com>" [ultimate]
+
+``
 - **Reason:** Decrypts using the receiver’s private key and verifies the sender's signature.
-
-
-
-
-
-
-
+- The message `Confidential Email Content` recovered from the decryption process
 
 
 
