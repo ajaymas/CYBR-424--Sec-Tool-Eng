@@ -22,7 +22,7 @@ brew install gnupg      # macOS (Homebrew)
 ```
 
 Verify installation:
-```bash
+```
 gpg --version
 ```
 
