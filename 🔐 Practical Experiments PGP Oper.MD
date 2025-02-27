@@ -274,7 +274,73 @@ If you need to share your public key, use:
 gpg --armor --export billgates@example.com > receiver_public_key.asc
 ```
 
+## Experiment 1: Sending and Receiving Emails Securely with PGP
 
+### Objective
+
+To encrypt and sign an email using PGP for confidentiality and authentication.
+
+### Requirements
+
+- GnuPG (GPG) installed (`sudo apt install gnupg` on Linux/macOS or use GPG4Win on Windows).
+- An email client supporting PGP (e.g., Thunderbird with Enigmail).
+- Key pairs generated for sender and receiver.
+
+### Steps
+
+#### 1. Generate PGP Key Pair
+
+```bash
+gpg --full-generate-key
+```
+
+- **Reason:** Creates a key pair (public & private) for encryption and signing.
+- Choose RSA and key size 4096 bits for strong security.
+
+#### 2. Export Public Key (To Share with Receiver)
+
+```bash
+gpg --export -a "user@example.com" > public_key.asc
+```
+
+- **Reason:** Public key must be shared for encryption.
+
+#### 3. Import Receiver's Public Key
+
+```bash
+gpg --import receiver_public_key.asc
+```
+
+- **Reason:** Required to encrypt messages for the recipient.
+
+#### 4. Sign an Email Message
+
+```bash
+echo "Confidential Email Content" | gpg --clearsign -a
+```
+
+- **Reason:** Ensures integrity and authenticity using the sender’s private key.
+
+#### 5. Encrypt an Email Message
+
+```bash
+echo "Confidential Email Content" | gpg --encrypt --sign --armor -r receiver@example.com
+```
+
+- `--encrypt` → Encrypts data.
+- `--sign` → Signs to ensure authenticity.
+- `--armor` → Outputs in ASCII for email compatibility.
+- `-r receiver@example.com` → Specifies recipient.
+
+#### 6. Decrypt and Verify Signature
+
+Receiver executes:
+
+```bash
+gpg --decrypt encrypted_email.asc
+```
+
+- **Reason:** Decrypts using the receiver’s private key and verifies the sender's signature.
 
 
 
