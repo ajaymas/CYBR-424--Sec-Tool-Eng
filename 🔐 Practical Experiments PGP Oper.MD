@@ -38,13 +38,6 @@ Generate a **PGP key pair** (private & public keys):
     ```bash
     gpg --full-generate-key
     ```
-
-# Generating a PGP Key Pair in Linux
-
-## Step 1: Run the Key Generation Command
-```bash
-gpg --full-generate-key
-```
 **Expected Output:**
 ```
 Please select what kind of key you want:
