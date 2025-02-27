@@ -265,7 +265,7 @@ This completes the **PGP key generation process** in Linux! 🚀
 
 Now, it's time to generate the private and public keys for the receiver(example ajayk and his email will be used as ajayk@gmail.com). However, keep the receiver's public key in the sender's public key ring (Bill Gates).
 
-To do this, repeat steps 1 to 8, but in step 9, follow these commands below in step 9 to store the receiver's public key information in a sender (Bill Gates publick keyring):
+To do this, repeat steps 1 to 8, but in step 9, follow these commands below in step 9 to store the receiver's public key information in a sender (Bill Gates) public keyring :
 
 Step 9: Export Your Public Key (Optional)
 
