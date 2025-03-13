@@ -1,5 +1,7 @@
 # **Practical Experimentation: SSH Public Key Authentication on Kali Linux**
 
+## Note: Before attempting these challenges, you need to have another VM with Ubuntu ISO (https://ubuntu.com/download/server) images, created with the server version. 
+
 ## **Objective**  
 Students will learn how to:  
 ✅ Generate an SSH key pair  
