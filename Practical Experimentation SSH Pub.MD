@@ -22,6 +22,32 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 - `-f ~/.ssh/id_rsa`: Saves the private key in the `~/.ssh/` directory.  
 - `-N ""`: Creates the key without a passphrase for easier testing (not recommended for production).  
 
+---
+remnux@remnux:~/Desktop/SSH$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
+Generating public/private rsa key pair.
+Created directory '/home/remnux/.ssh'.
+Your identification has been saved in /home/remnux/.ssh/id_rsa
+Your public key has been saved in /home/remnux/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:AT3vyFpaUMvl9r17C7gZEev57hEaVzmkzHGXszKZEl8 remnux@remnux
+The key's randomart image is:
++---[RSA 4096]----+
+|      ..     . oo|
+|       .+ ..o =Eo|
+|       o.* .o+++o|
+|      . o.+.o*...|
+|       oS+ =.+o  |
+|        = o O o  |
+|       =   * o . |
+|      o     = + .|
+|           oo+.+.|
++----[SHA256]-----+
+
+---
+
+
+
+
 #### **Verify Key Pair Creation:**
 ```bash
 ls -l ~/.ssh/
@@ -94,7 +120,7 @@ sudo systemctl restart ssh
 ---
 
 ## **📜 Capture the Flag (CTF) Challenges**
-After setting up SSH key authentication, students can solve the following challenges:
+After setting up SSH key authentication, one can solve the following challenges:
 
 ### **🔎 Challenge 1: Locate the SSH Keys on the System**
 > What command can you use to list all SSH keys on a Linux system?
