@@ -121,6 +121,14 @@ sudo systemctl restart ssh
 
 ---
 
+## **📝 Conclusion**
+ Now you have learned:  
+✅ How SSH public key authentication works.  
+✅ How to generate and use SSH keys.  
+✅ How to troubleshoot SSH authentication.  
+
+🎯 **Now, try the CTF challenges and test your knowledge!** 💻🔥
+
 ## **📜 Capture the Flag (CTF) Challenges**
 After setting up SSH key authentication, one can solve the following challenges:
 
@@ -147,10 +155,3 @@ chmod 700 ~/.ssh/
 
 ---
 
-## **📝 Conclusion**
-Students have now learned:  
-✅ How SSH public key authentication works.  
-✅ How to generate and use SSH keys.  
-✅ How to troubleshoot SSH authentication.  
-
-🎯 **Now, try the CTF challenges and test your knowledge!** 💻🔥
