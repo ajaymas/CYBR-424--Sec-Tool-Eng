@@ -22,7 +22,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 - `-f ~/.ssh/id_rsa`: Saves the private key in the `~/.ssh/` directory.  
 - `-N ""`: Creates the key without a passphrase for easier testing (not recommended for production).  
 
----
+```
 remnux@remnux:~/Desktop/SSH$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 Generating public/private rsa key pair.
 Created directory '/home/remnux/.ssh'.
@@ -43,7 +43,7 @@ The key's randomart image is:
 |           oo+.+.|
 +----[SHA256]-----+
 
----
+```
 
 
 
