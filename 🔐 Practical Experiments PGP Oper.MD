@@ -16,7 +16,7 @@ This document provides step-by-step **PGP experiments** using **GnuPG (GPG)** on
 ## 📌 **1. Setup: Install GnuPG (GPG)**
 Install **GnuPG**, an open-source PGP implementation.
 
-```bash
+```
 sudo apt install gnupg  # Linux (Debian/Ubuntu)
 brew install gnupg      # macOS (Homebrew)
 ```
