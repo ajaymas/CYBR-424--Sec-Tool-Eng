@@ -35,9 +35,9 @@ Generate a **PGP key pair** (private & public keys):
 
 ## Step 1: Run the following command to generate the PGP key pair:**
 
-    ```
+```
     gpg --full-generate-key
-    ```
+```
 **Expected Output:**
 ```
 Please select what kind of key you want:
