@@ -6,7 +6,7 @@
 
 Learn how to use iptables to create basic firewall rules.
 
-**Step-by-Step Procedure:**
+
 
 1. **Check Current Rules:**
 
@@ -52,7 +52,7 @@ Learn how to use iptables to create basic firewall rules.
 
 Create packet filtering rules using iptables.
 
-**Step-by-Step Procedure:**
+
 
 1. **Block Traffic from a Specific IP Range:**
 
@@ -96,7 +96,7 @@ Create packet filtering rules using iptables.
 
 Understand SYN flood attacks and mitigate them with a firewall.
 
-**Step-by-Step Procedure:**
+
 
 1. **Simulate a SYN Flood Attack:**
 
@@ -132,7 +132,7 @@ Understand SYN flood attacks and mitigate them with a firewall.
 
 Set up a simple application-level gateway.
 
-**Step-by-Step Procedure:**
+
 
 1. **Install Squid Proxy:**
 
@@ -165,7 +165,7 @@ Set up a simple application-level gateway.
 
 Set up a basic DMZ configuration.
 
-**Step-by-Step Procedure:**
+
 
 1. **Define Network Interfaces:**
 
@@ -191,7 +191,7 @@ Set up a basic DMZ configuration.
 
 Understand stateful firewalls.
 
-**Step-by-Step Procedure:**
+
 
 1. **Allow Established and Related Connections:**
 
@@ -217,7 +217,7 @@ Understand stateful firewalls.
 
 Enable logging of blocked packets.
 
-**Step-by-Step Procedure:**
+
 
 1. **Add Logging Rule:**
 
@@ -237,7 +237,7 @@ Enable logging of blocked packets.
 
 Save and restore firewall rules.
 
-**Step-by-Step Procedure:**
+
 
 1. **Save the Rules:**
 
