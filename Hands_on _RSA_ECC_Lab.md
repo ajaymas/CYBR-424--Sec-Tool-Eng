@@ -46,9 +46,9 @@ cat rsa_decrypted.txt
 
 - **Key Size Advantage**  
   - ECC provides equivalent security with much shorter keys:  
-    - 256-bit ECC â‰ˆ 3072-bit RSA  
-    - 384-bit ECC â‰ˆ 7680-bit RSA  
-    - 521-bit ECC â‰ˆ 15,360-bit RSA  
+    - 256-bit ECC = 3072-bit RSA  
+    - 384-bit ECC = 7680-bit RSA  
+    - 521-bit ECC = 15,360-bit RSA  
 
 - **Performance Benefits**  
   - Faster key generation, encryption, and decryption.  
@@ -56,7 +56,7 @@ cat rsa_decrypted.txt
   - Efficient for devices with limited resources (IoT, smartcards, mobile).  
 
 - **Common Curves**  
-  - **prime256v1 (secp256r1 / P-256)** â†’ Widely used, standardized by NIST.  
+  - **prime256v1 (secp256r1 / P-256)** = Widely used, standardized by NIST.  
   - **secp384r1, secp521r1** = Higher security levels.  
   - **Curve25519** = Modern, designed for speed and security, used in TLS and SSH.  
   - **Ed25519** = Signature scheme using Curve25519, very fast and secure.  
