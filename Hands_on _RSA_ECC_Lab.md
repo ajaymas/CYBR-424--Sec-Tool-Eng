@@ -34,6 +34,47 @@ cat rsa_decrypted.txt
 
 ## Part 2: ECC — ECDH-derived AES Encryption/Decryption
 
+- **Mathematical Basis**  
+  - ECC is built on the algebraic structure of **elliptic curves** over finite fields.  
+  - The general curve equation is:  
+    \[ y^2 = x^3 + ax + b \pmod{p} \]  
+    where `a`, `b` are curve parameters and `p` is a prime.  
+
+- **Security from Hard Problems**  
+  - Security relies on the **Elliptic Curve Discrete Logarithm Problem (ECDLP)** â€” very hard to solve, even with powerful computers.  
+  - Unlike RSA (factoring integers), ECC offers stronger security with smaller key sizes.  
+
+- **Key Size Advantage**  
+  - ECC provides equivalent security with much shorter keys:  
+    - 256-bit ECC â‰ˆ 3072-bit RSA  
+    - 384-bit ECC â‰ˆ 7680-bit RSA  
+    - 521-bit ECC â‰ˆ 15,360-bit RSA  
+
+- **Performance Benefits**  
+  - Faster key generation, encryption, and decryption.  
+  - Lower memory and bandwidth usage.  
+  - Efficient for devices with limited resources (IoT, smartcards, mobile).  
+
+- **Common Curves**  
+  - **prime256v1 (secp256r1 / P-256)** â†’ Widely used, standardized by NIST.  
+  - **secp384r1, secp521r1** â†’ Higher security levels.  
+  - **Curve25519** â†’ Modern, designed for speed and security, used in TLS and SSH.  
+  - **Ed25519** â†’ Signature scheme using Curve25519, very fast and secure.  
+
+- **Applications of ECC**  
+  - **Encryption:** Elliptic Curve Integrated Encryption Scheme (ECIES).  
+  - **Digital Signatures:** Elliptic Curve Digital Signature Algorithm (ECDSA), EdDSA.  
+  - **Key Exchange:** Elliptic Curve Diffie-Hellman (ECDH).  
+
+- **Standardization & Usage**  
+  - Adopted by NIST, ISO, ANSI, and used in TLS (HTTPS), SSH, Bitcoin, and modern cryptosystems.  
+  - Preferred in modern protocols (TLS 1.3, Signal messenger, WhatsApp).  
+
+- **Quantum Threat**  
+  - Vulnerable to Shorâ€™s algorithm on large-scale quantum computers (same as RSA).  
+  - Post-quantum cryptography (lattice-based, code-based, etc.) is being developed to replace it in the future.  
+
+
 > ECC is usually used for **key exchange** (ECDH), not direct encryption. Here we derive a shared secret, turn it into an AES key, and use it for symmetric encryption.
 
 We simulate two parties: **Alice** and **Bob**.
