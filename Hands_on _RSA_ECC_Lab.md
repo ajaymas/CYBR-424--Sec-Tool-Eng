@@ -57,9 +57,9 @@ cat rsa_decrypted.txt
 
 - **Common Curves**  
   - **prime256v1 (secp256r1 / P-256)** â†’ Widely used, standardized by NIST.  
-  - **secp384r1, secp521r1** â†’ Higher security levels.  
-  - **Curve25519** â†’ Modern, designed for speed and security, used in TLS and SSH.  
-  - **Ed25519** â†’ Signature scheme using Curve25519, very fast and secure.  
+  - **secp384r1, secp521r1** = Higher security levels.  
+  - **Curve25519** = Modern, designed for speed and security, used in TLS and SSH.  
+  - **Ed25519** = Signature scheme using Curve25519, very fast and secure.  
 
 - **Applications of ECC**  
   - **Encryption:** Elliptic Curve Integrated Encryption Scheme (ECIES).  
