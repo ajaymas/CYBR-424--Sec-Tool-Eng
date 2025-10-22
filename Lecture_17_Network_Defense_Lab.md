@@ -196,14 +196,3 @@ Failed password for invalid user admin from 192.168.1.10 port 51234 ssh2
 | Hardening | `systemctl`, `apt` | Reduce exposure |
 
 ---
-
-## 📘 Assignment Idea
-
-Perform a simulated **Defense-in-Depth audit** of your Linux VM:
-1. Identify open services and risks.  
-2. Apply at least 3 hardening measures.  
-3. Document each command, screenshot, and output in a short report.
-
----
-
-*Prepared for practical teaching by Dr. Ajay Kumara – University of North Carolina Wilmington*
