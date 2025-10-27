@@ -22,12 +22,6 @@ which nmap && echo "✓ nmap installed" || echo "✗ nmap missing"
 # For Debian/Ubuntu
 sudo apt-get update
 sudo apt-get install -y iproute2 curl nmap
-
-# For RHEL/CentOS/Fedora
-sudo yum install -y iproute curl nmap
-
-# For Arch Linux
-sudo pacman -S iproute2 curl nmap
 ```
 
 ---
