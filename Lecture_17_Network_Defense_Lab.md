@@ -64,7 +64,7 @@ sudo systemctl list-units --type=service --state=running
 
 📸 *[Screenshot: running services list]*
 
--`systemctl` is the main command to manage systemd services on Linux.
+- `systemctl` is the main command to manage systemd services on Linux.
 - `list-units` → Lists systemd units (services, sockets, etc.).
 - `--type=service` → Only show services (not timers, sockets, etc.).
 - `--state=running` → Only show services that are currently active and running.
