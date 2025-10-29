@@ -50,30 +50,9 @@ sudo apt list --upgradable
 
 ---
 
-## 🔐 3. CIA Triad
-
-### Confidentiality
-```bash
-gpg --symmetric hr_data.txt
-```
-Creates encrypted file `hr_data.txt.gpg`.
-
-### Integrity
-```bash
-sha256sum important_file.zip
-```
-Compares hash before and after transfer.
-
-### Availability
-```bash
-ping -c 4 google.com
-```
-
-📸 *[Screenshot: gpg encryption prompt]*
-
 ---
 
-## 🧠 4. Threats and Vulnerabilities
+## 🧠 3. Threats and Vulnerabilities
 
 **Concept:** Weak passwords, unpatched software, and open services increase attack surface.
 
