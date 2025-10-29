@@ -20,6 +20,7 @@ sudo ufw allow 80/tcp
 sudo ufw deny 23/tcp
 sudo ufw status numbered
 ```
+- `ufw' stands for Uncomplicated Firewall. It is a frontend for `iptables` designed to make firewall management easier on Linux systems, especially for basic setups.
 
 ### 📊 Expected Output
 ```
