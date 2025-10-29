@@ -64,8 +64,6 @@ sudo systemctl list-units --type=service --state=running
 
 📸 *[Screenshot: running services list]*
 
-# Viewing Running Services with systemctl
-
 `systemctl` is the main command to manage systemd services on Linux.
 
 ## Key Options
