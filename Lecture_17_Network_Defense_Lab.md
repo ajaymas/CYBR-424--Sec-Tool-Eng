@@ -84,17 +84,7 @@ sudo systemctl list-units --type=service --state=running
 ```
 ---
 
-## 🧱 4. Defense-in-Depth Approaches
-
-| Approach | Focus | Example |
-|-----------|--------|---------|
-| Uniform Protection | Equal security everywhere | Antivirus across all systems |
-| Protected Enclaves | Segmentation | VLANs for HR/Finance |
-| Information-Centric | Secure data itself | Database encryption |
-| Vector-Oriented | Secure entry points | Disable USB, ports |
-| Role-Based Access | Restrict by job | RBAC in Linux |
-
-### 🧪 Commands (RBAC Example)
+### 5. 🧪 Commands (RBAC Example)
 ```bash
 sudo groupadd finance
 sudo useradd -G finance ajay
@@ -106,7 +96,7 @@ sudo chmod 770 /secure_finance
 
 ---
 
-## 🌐 5. Network Attacks Overview
+## 🌐 6. Network Attacks Overview
 
 **Concept:** Malicious activities like DoS, spoofing, and routing exploitation.
 
@@ -134,7 +124,7 @@ sudo arping <target-ip>
 
 ---
 
-## 🔗 8. TCP Layer Attacks
+## 🔗 7. TCP Layer Attacks
 
 **Concept:** Exploiting TCP handshake and session trust.
 
