@@ -71,11 +71,6 @@ sudo systemctl list-units --type=service --state=running
 
 ✅ **Purpose:** See which services are currently running on your system.
 
-## Example Command
-
-```bash
-sudo systemctl list-units --type=service --state=running
-```
 
 ## Example Output (snippet)
 
