@@ -66,7 +66,7 @@ sudo systemctl list-units --type=service --state=running
 
 ---
 
-## 🧱 5. Defense-in-Depth Approaches
+## 🧱 4. Defense-in-Depth Approaches
 
 | Approach | Focus | Example |
 |-----------|--------|---------|
@@ -88,7 +88,7 @@ sudo chmod 770 /secure_finance
 
 ---
 
-## 🌐 6. Network Attacks Overview
+## 🌐 5. Network Attacks Overview
 
 **Concept:** Malicious activities like DoS, spoofing, and routing exploitation.
 
@@ -103,7 +103,7 @@ sudo tcpdump -n -i eth0 tcp
 
 ---
 
-## 🌍 7. ICMP and IP Layer Attacks
+## 🌍 6. ICMP and IP Layer Attacks
 
 **Concept:** Exploiting trust in network protocols — ARP spoofing, ICMP redirect, etc.
 
@@ -131,7 +131,7 @@ Use to inspect active TCP connections and DNS configurations.
 
 ---
 
-## 🚫 9. Denial of Service (DoS/DDoS)
+## 🚫 8. Denial of Service (DoS/DDoS)
 
 **Concept:** Exhausts bandwidth or processing power to deny service.
 
@@ -146,7 +146,7 @@ sudo tcpdump -c 1000 -w ddos_trace.pcap
 
 ---
 
-## 🧰 10. Network Hardening and Exposure Minimization
+## 🧰 9. Network Hardening and Exposure Minimization
 
 **Concept:** Reduce attack surface by disabling unused services, patching, and auditing.
 
