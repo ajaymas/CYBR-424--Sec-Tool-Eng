@@ -64,6 +64,34 @@ sudo systemctl list-units --type=service --state=running
 
 📸 *[Screenshot: running services list]*
 
+# Viewing Running Services with systemctl
+
+`systemctl` is the main command to manage systemd services on Linux.
+
+## Key Options
+
+- `list-units` → Lists systemd units (services, sockets, etc.).
+- `--type=service` → Only show services (not timers, sockets, etc.).
+- `--state=running` → Only show services that are currently active and running.
+
+✅ **Purpose:** See which services are currently running on your system.
+
+## Example Command
+
+```bash
+sudo systemctl list-units --type=service --state=running
+```
+
+## Example Output (snippet)
+
+```
+  UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service     loaded active running Accounts Service
+  apache2.service             loaded active running The Apache HTTP Server
+  colord.service              loaded active running Manage, Install and Generate Color Profiles
+  cron.service                loaded active running Regular background program processing daemon
+  dbus.service                loaded active running D-Bus System Message Bus
+```
 ---
 
 ## 🧱 4. Defense-in-Depth Approaches
