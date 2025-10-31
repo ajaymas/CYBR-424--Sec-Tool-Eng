@@ -46,6 +46,46 @@ Learn how to use iptables to create basic firewall rules.
     - `-n` → Display numeric IP addresses.
     - `-v` → Display verbose output.
 
+## Expected Output
+
+When you run `sudo iptables -L -n -v`, you'll see output similar to this:
+
+```
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     tcp  --  *      *       192.168.1.100        0.0.0.0/0            tcp dpt:22
+    0     0 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+```
+
+---
+
+## Output Explanation
+
+* **Chain INPUT** - Shows rules for incoming traffic to your server
+
+* **pkts / bytes** - Counters showing how many packets/bytes matched each rule (initially 0)
+
+* **First rule (ACCEPT)** - Only allows SSH connections from IP 192.168.1.100
+  * Source: 192.168.1.100
+  * Destination port: 22 (SSH)
+  * Action: ACCEPT
+
+* **Second rule (DROP)** - Blocks all other SSH connection attempts
+  * Source: 0.0.0.0/0 (any IP address)
+  * Destination port: 22 (SSH)
+  * Action: DROP (silently discards packets)
+
+* **Rule order matters** - iptables processes rules sequentially, so the ACCEPT rule for 192.168.1.100 is evaluated first, then the DROP rule catches everything else
+
+* **Security result** - Only the specific IP (192.168.1.100) can access SSH; all other SSH attempts are blocked, preventing unauthorized access
+
+
 ## ✅ Exercise 2: Implementing a Packet Filtering Firewall
 
 **Objective:**
@@ -258,3 +298,4 @@ Save and restore firewall rules.
 - Creating a DMZ and managing traffic.
 - Configuring an application-level gateway.
 - Monitoring and logging firewall activities.
+
