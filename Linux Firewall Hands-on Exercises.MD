@@ -122,7 +122,7 @@ Create packet filtering rules using iptables.
     - `-m conntrack` → Use connection tracking module.
     - `--ctstate ESTABLISHED,RELATED` → Accepts established or related connections.
 
-4. **Step 4: Save the Rules
+4. **Step 4: Save the Rules**
 
 **First, create the directory:**
 ```bash
@@ -311,5 +311,6 @@ Save and restore firewall rules.
 - Creating a DMZ and managing traffic.
 - Configuring an application-level gateway.
 - Monitoring and logging firewall activities.
+
 
 
