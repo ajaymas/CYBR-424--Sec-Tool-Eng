@@ -122,7 +122,7 @@ Create packet filtering rules using iptables.
     - `-m conntrack` → Use connection tracking module.
     - `--ctstate ESTABLISHED,RELATED` → Accepts established or related connections.
 
-4. **Step 4: Save the Rules**
+4. **Save the Rules**
 
 **First, create the directory:**
 ```bash
@@ -141,6 +141,7 @@ sudo iptables-save | sudo tee /etc/iptables/rules.v4
 * `sudo tee`→  Writes to file with sudo privileges
 * `/etc/iptables/rules.v4`→  Standard location for persistent IPv4 rules
 
+**Purpose:** Saves rules so they persist after reboot.
 
 
 ## ✅ Exercise 3: Simulating a SYN Flood Attack and Firewall Protection
@@ -311,6 +312,7 @@ Save and restore firewall rules.
 - Creating a DMZ and managing traffic.
 - Configuring an application-level gateway.
 - Monitoring and logging firewall activities.
+
 
 
 
