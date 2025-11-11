@@ -1,11 +1,11 @@
-# 🔬 Attack Surface Mapping - Safe Practice Guide: Educational purpose only 
+#  Attack Surface Mapping - Safe Practice Guide: Educational purpose only 
 
-## 🎯 Objective
+##  Objective
 Learn to identify and analyze your system's attack surface using Linux tools **without causing errors or system damage**.
 
 ---
 
-## 📋 Prerequisites Check
+##  Prerequisites Check
 
 Before starting, verify you have the required tools:
 
@@ -26,7 +26,7 @@ sudo apt-get install -y iproute2 curl nmap
 
 ---
 
-## 🛠️ Phase 1: List All Listening Services
+##  Phase 1: List All Listening Services
 
 ### Command 1: `sudo ss -tulpn`
 
@@ -61,7 +61,7 @@ sudo ss -tlpn
 sudo ss -ulpn
 ```
 
-### 📊 Understanding the Output:
+###  Understanding the Output:
 
 ```
 Netid  State   Recv-Q  Send-Q  Local Address:Port   Peer Address:Port  Process
@@ -77,7 +77,7 @@ tcp    LISTEN  0       128     127.0.0.1:631       0.0.0.0:*          users:(("c
   - `127.0.0.1:631` = CUPS printer service on localhost only
 - **Process:** Which program is running
 
-### 🔍 Analysis Exercise:
+###  Analysis Exercise:
 
 ```bash
 # Create a simple analysis script
@@ -101,7 +101,7 @@ chmod +x analyze_ports.sh
 
 ---
 
-## 🌐 Phase 2: Check Web Server Exposure
+##  Phase 2: Check Web Server Exposure
 
 ### Command 2: `curl -I localhost`
 
@@ -168,7 +168,7 @@ curl -I localhost > ~/webserver_headers.txt
 curl -I localhost | grep -i "security\|x-frame\|x-xss\|strict-transport"
 ```
 
-### 🚫 What if Nothing Works?
+###  What if Nothing Works?
 
 ```bash
 # This is NORMAL if you don't have a web server!
@@ -186,7 +186,7 @@ killall python3
 
 ---
 
-## 🔍 Phase 3: Full Attack Surface Scan
+##  Phase 3: Full Attack Surface Scan
 
 ### Command 3: `sudo nmap -A -T4 localhost`
 
@@ -197,7 +197,7 @@ killall python3
 - `-T4` = Timing template (faster, 0=slowest, 5=fastest)
 - `localhost` = Target (127.0.0.1)
 
-### ⚠️ Important Safety Notes:
+###  Important Safety Notes:
 
 1. **ONLY scan localhost/127.0.0.1** (your own machine)
 2. **Never scan external IPs** without permission (it's illegal!)
@@ -242,7 +242,7 @@ PORT    STATE SERVICE VERSION
 - **OS detection:** Ubuntu Linux
 - **This is your attack surface!**
 
-### 🎯 Focused Scanning:
+###  Focused Scanning:
 
 ```bash
 # Scan common web ports only
@@ -263,7 +263,7 @@ sudo nmap -sU localhost
 
 ---
 
-## 🧪 Complete Practice Lab
+##  Complete Practice Lab
 
 ### Lab Exercise: Full Attack Surface Assessment
 
@@ -310,15 +310,15 @@ echo "✓ Saved to step5_versions.txt"
 echo ""
 
 echo "════════════════════════════════════════"
-echo "📊 Summary Report"
+echo " Summary Report"
 echo "════════════════════════════════════════"
 echo "Total listening ports: $(sudo ss -tulpn | grep LISTEN | wc -l)"
 echo "Public-facing services: $EXPOSED_COUNT"
 echo "Open ports: $(sudo nmap -F localhost | grep open | wc -l)"
 echo ""
-echo "📁 All results saved in: ~/security_lab_results/"
+echo " All results saved in: ~/security_lab_results/"
 echo ""
-echo "🔍 Next steps:"
+echo " Next steps:"
 echo "   1. Review each .txt file"
 echo "   2. Identify unnecessary services"
 echo "   3. Close unused ports"
@@ -333,7 +333,7 @@ chmod +x attack_surface_lab.sh
 
 ---
 
-## 🛡️ Common Issues & Solutions
+##  Common Issues & Solutions
 
 ### Issue 1: "Permission denied"
 ```bash
@@ -382,7 +382,7 @@ sudo nmap --top-ports 20 localhost  # Only top 20 ports
 
 ---
 
-## 📚 Practice Exercises
+##  Practice Exercises
 
 ### Exercise 1: Baseline Assessment
 ```bash
@@ -426,19 +426,19 @@ diff headers_before.txt headers_after.txt
 ---
 
 
-## 🎓 Key Takeaways
+##  Key Takeaways
 
-1. ✅ **Always scan only localhost** for practice
-2. ✅ **Document your baseline** before making changes
-3. ✅ **Fewer open ports = smaller attack surface**
-4. ✅ **Hide version information** when possible
-5. ✅ **Services on 127.0.0.1** are safer than 0.0.0.0
-6. ✅ **Regular scans** help detect unwanted changes
-7. ✅ **Update software** to patch vulnerabilities
+1.  **Always scan only localhost** for practice
+2.  **Document your baseline** before making changes
+3.  **Fewer open ports = smaller attack surface**
+4.  **Hide version information** when possible
+5.  **Services on 127.0.0.1** are safer than 0.0.0.0
+6.  **Regular scans** help detect unwanted changes
+7.  **Update software** to patch vulnerabilities
 
 ---
 
-## 🔗 Additional Resources
+##  Additional Resources
 
 ```bash
 # man pages for more details
@@ -457,7 +457,7 @@ firefox https://nmap.org/book/man.html
 
 ---
 
-## ✅ Completion Checklist
+##  Completion Checklist
 
 - [ ] Installed all required tools
 - [ ] Successfully ran `ss -tulpn`
