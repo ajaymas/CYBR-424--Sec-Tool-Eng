@@ -5,7 +5,6 @@ First, install the necessary Kerberos packages:
 
 ```bash
 sudo apt update && sudo apt install krb5-user krb5-kdc krb5-admin-server -y  # Ubuntu/Debian  
-sudo yum install krb5-workstation krb5-server krb5-libs -y  # RHEL/CentOS  
 ```
 
 During installation, you'll be prompted to configure the **Kerberos realm** (e.g., `EXAMPLE.COM`).
@@ -125,5 +124,6 @@ This clears all Kerberos credentials from the system.
 ---
 
 ## Key Takeaways
-✅ **Kerberos secures authentication** by using encrypted tickets instead of passwords.  
-✅ The **Authentication Server (AS)** verifies users and issues a **TGT**.
+ **Kerberos secures authentication** by using encrypted tickets instead of passwords.  
+ The **Authentication Server (AS)** verifies users and issues a **TGT**.
+
