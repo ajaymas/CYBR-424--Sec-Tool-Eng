@@ -1,19 +1,19 @@
-# 🔐 Practical Experiments: PGP Operations in Linux
+#  Practical Experiments: PGP Operations in Linux
 
 This document provides step-by-step **PGP experiments** using **GnuPG (GPG)** on **Linux/macOS**.
 
-# 🔥 What This Covers:
+#  What This Covers:
 
-✅ **PGP Authentication** (Digital Signatures)  
-✅ **PGP Confidentiality** (Encryption & Decryption)  
-✅ **PGP Authentication + Confidentiality** (Combined Approach)  
-✅ **PGP Compression** (Efficient Storage & Transmission)  
-✅ **PGP Email Compatibility** (Encoding for Email)  
-✅ **PGP Session Keys & Key Management**  
+ **PGP Authentication** (Digital Signatures)  
+ **PGP Confidentiality** (Encryption & Decryption)  
+ **PGP Authentication + Confidentiality** (Combined Approach)  
+ **PGP Compression** (Efficient Storage & Transmission)  
+ **PGP Email Compatibility** (Encoding for Email)  
+ **PGP Session Keys & Key Management**  
 
 ---
 
-## 📌 **1. Setup: Install GnuPG (GPG)**
+##  **1. Setup: Install GnuPG (GPG)**
 Install **GnuPG**, an open-source PGP implementation.
 
 ```
@@ -28,7 +28,7 @@ gpg --version
 
 ---
 
-## ✅ **2. PGP Authentication: Digital Signatures**
+##  **2. PGP Authentication: Digital Signatures**
 Generate a **PGP key pair** (private & public keys):
 
 ## This step will guide you through generating a PGP key pair, which includes both a private key and a public key for a sender (Exmaple Bill Gates).
@@ -356,7 +356,8 @@ gpg: Good signature from "Bill gates (Research Key) <billgates@example.com>" [ul
 
 
 ## The following will be discussed later:
-✅ **PGP Authentication + Confidentiality** (Combined Approach)  
-✅ **PGP Compression** (Efficient Storage & Transmission)  
-✅ **PGP Email Compatibility** (Encoding for Email)  
-✅ **PGP Session Keys & Key Management**  
+ **PGP Authentication + Confidentiality** (Combined Approach)  
+ **PGP Compression** (Efficient Storage & Transmission)  
+ **PGP Email Compatibility** (Encoding for Email)  
+ **PGP Session Keys & Key Management**  
+
