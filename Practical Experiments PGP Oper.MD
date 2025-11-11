@@ -31,7 +31,7 @@ gpg --version
 ##  **2. PGP Authentication: Digital Signatures**
 Generate a **PGP key pair** (private & public keys):
 
-## This step will guide you through generating a PGP key pair, which includes both a private key and a public key for a sender (Exmaple Bill Gates).
+## This step will guide you through generating a PGP key pair, which includes both a private key and a public key for a sender (Example Bill Gates).
 
 ## Step 1: Run the following command to generate the PGP key pair:**
 
@@ -85,7 +85,7 @@ Key is valid for? (0)
 
 **Confirmation Prompt:**
 ```
-Key does not expire at all
+The key does not expire at all
 Is this correct? (y/N)
 ```
 **Action:**  
@@ -360,4 +360,5 @@ gpg: Good signature from "Bill gates (Research Key) <billgates@example.com>" [ul
  **PGP Compression** (Efficient Storage & Transmission)  
  **PGP Email Compatibility** (Encoding for Email)  
  **PGP Session Keys & Key Management**  
+
 
