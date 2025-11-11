@@ -139,11 +139,11 @@ These steps allow you to:
 5. **Verify the signature** using the public key.
 
 ### **Use Cases of DSA**
-✅ **Secure email signing (PGP, GPG)**  
-✅ **Code signing (software updates, packages)**  
-✅ **Authentication (SSH keys, digital certificates)**  
+**Secure email signing (PGP, GPG)**  
+**Code signing (software updates, packages)**  
+**Authentication (SSH keys, digital certificates)**  
 
-> 🚀 **By following these steps, you can securely generate and verify digital signatures using DSA in Linux!**
+> **By following these steps, you can securely generate and verify digital signatures using DSA in Linux!**
 
 
 
