@@ -1,6 +1,6 @@
 # Linux Firewall Hands-on Exercises with Detailed Commands and Explanations
 
-## ✅ Exercise 1: Setting Up a Basic Firewall Using Iptables
+##  Exercise 1: Setting Up a Basic Firewall Using Iptables
 
 **Objective:**
 
@@ -86,7 +86,7 @@ Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
 * **Security result** - Only the specific IP (192.168.1.100) can access SSH; all other SSH attempts are blocked, preventing unauthorized access
 
 
-## ✅ Exercise 2: Implementing a Packet Filtering Firewall
+##  Exercise 2: Implementing a Packet Filtering Firewall
 
 **Objective:**
 
@@ -180,7 +180,7 @@ Understand SYN flood attacks and mitigate them with a firewall.
     - `--syn` → Match SYN packets.
     - `--limit 1/s` → Limit to 1 packet per second.
 
-## ✅ Exercise 4: Configuring an Application-Level Gateway with Squid Proxy
+##  Exercise 4: Configuring an Application-Level Gateway with Squid Proxy
 
 **Objective:**
 
@@ -213,7 +213,7 @@ Set up a simple application-level gateway.
     sudo systemctl restart squid
     ```
 
-## ✅ Exercise 5: Configuring a DMZ Using iptables
+##  Exercise 5: Configuring a DMZ Using iptables
 
 **Objective:**
 
@@ -239,7 +239,7 @@ Set up a basic DMZ configuration.
     sudo iptables -A FORWARD -i eth2 -o eth1 -j DROP
     ```
 
-## ✅ Exercise 6: Testing Stateful Firewall Rules
+##  Exercise 6: Testing Stateful Firewall Rules
 
 **Objective:**
 
@@ -285,7 +285,7 @@ Enable logging of blocked packets.
     sudo tail -f /var/log/syslog | grep "Dropped"
     ```
 
-## ✅ Exercise 8: Firewall Persistence and Backup
+##  Exercise 8: Firewall Persistence and Backup
 
 **Objective:**
 
@@ -305,13 +305,14 @@ Save and restore firewall rules.
     sudo iptables-restore < /etc/iptables/rules.v4
     ```
 
-## 💡 Key Learning Outcomes:
+##  Key Learning Outcomes:
 
 - Configuring and managing iptables firewall rules.
 - Protecting against SYN flood attacks.
 - Creating a DMZ and managing traffic.
 - Configuring an application-level gateway.
 - Monitoring and logging firewall activities.
+
 
 
 
