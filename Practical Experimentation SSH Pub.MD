@@ -4,14 +4,14 @@
 
 ## **Objective**  
 Students will learn how to:  
-✅ Generate an SSH key pair  
-✅ Configure SSH authentication using public keys  
-✅ Log in to a remote machine using SSH keys  
-✅ Test their understanding with CTF-style questions  
+ Generate an SSH key pair  
+ Configure SSH authentication using public keys  
+ Log in to a remote machine using SSH keys  
+ Test their understanding with CTF-style questions  
 
 ---
 
-## **🛠 Step 1: Generate an SSH Key Pair (Client Side - Kali Linux)**
+## ** Step 1: Generate an SSH Key Pair (Client Side - Kali Linux)**
 Run the following command to generate a key pair:
 
 ```bash
@@ -93,7 +93,7 @@ Now, log in **without entering a password**:
 ssh user@target-ip
 ```
 
-✅ If successful, this means SSH key authentication is working!
+ If successful, this means SSH key authentication is working!
 
 ---
 
@@ -117,30 +117,30 @@ Restart SSH service:
 sudo systemctl restart ssh
 ```
 
-🚀 **Now, only key-based authentication is allowed!**
+ **Now, only key-based authentication is allowed!**
 
 ---
 
-## **📝 Conclusion**
+## ** Conclusion**
  Now you have learned:  
-✅ How SSH public key authentication works.  
-✅ How to generate and use SSH keys.  
-✅ How to troubleshoot SSH authentication.  
+ How SSH public key authentication works.  
+ How to generate and use SSH keys.  
+ How to troubleshoot SSH authentication.  
 
-🎯 **Now, try the CTF challenges and test your knowledge!** 💻🔥
+ **Now, try the CTF challenges and test your knowledge!** 
 
-## **📜 Capture the Flag (CTF) Challenges**
+## ** Capture the Flag (CTF) Challenges**
 After setting up SSH key authentication, one can solve the following challenges:
 
-### **🔎 Challenge 1: Locate the SSH Keys on the System**
+### ** Challenge 1: Locate the SSH Keys on the System**
 > What command can you use to list all SSH keys on a Linux system?
 
-### **🔐 Challenge 2: Break into a Locked User Account**
+### ** Challenge 2: Break into a Locked User Account**
 > If a user named `hacker01` cannot log in using SSH due to a permission issue, what command would you use on the server to fix SSH key file permissions?
 
 ---
 
-### **💡 Hint for Challenge 2:**
+### ** Hint for Challenge 2:**
 Run:
 
 ```bash
@@ -154,4 +154,5 @@ chmod 700 ~/.ssh/
 ```
 
 ---
+
 
