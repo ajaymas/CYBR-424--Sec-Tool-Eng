@@ -1,18 +1,18 @@
 
-# 🧠 Lecture 17: Network Defense — Practical Lab Guide (Ubuntu-based)
+#  Lecture 17: Network Defense — Practical Lab Guide (Ubuntu-based)
 
 This lab follows the lecture concepts with **hands-on exercises** using Linux (Ubuntu/Debian).  
 Each section includes: concept, real-world context, command walkthroughs, expected outputs, and screenshot placeholders.
 
 ---
 
-## 🔐 1. Defense in Depth (DiD)
+##  1. Defense in Depth (DiD)
 
 **Concept:** Layered security ensures that even if one defense fails, others protect the system.
 
 **Example:** Firewall + IDS + MFA + Backup = Reduced overall risk.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo ufw enable
 sudo ufw allow 22/tcp
@@ -22,7 +22,7 @@ sudo ufw status numbered
 ```
 - `ufw` stands for Uncomplicated Firewall. It is a frontend for `iptables` designed to make firewall management easier on Linux systems, especially for basic setups.
 
-### 📊 Expected Output
+###  Expected Output
 ```
 Status: active
 To                         Action      From
@@ -31,17 +31,17 @@ To                         Action      From
 80/tcp                     ALLOW       Anywhere
 23/tcp                     DENY        Anywhere
 ```
-📸 *[Screenshot: Terminal showing UFW rules]*
+ *[Screenshot: Terminal showing UFW rules]*
 
 ---
 
-## ⚖️ 2. Risk Management
+##  2. Risk Management
 
 **Concept:** Risk = Threat × Vulnerability. Manage by patching, isolating, and monitoring.
 
 **Example:** Patch outdated PHP; scan network for open services.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo nmap -sS localhost
 sudo apt list --upgradable
@@ -52,24 +52,24 @@ sudo apt list --upgradable
 
 ---
 
-## 🧠 3. Threats and Vulnerabilities
+##  3. Threats and Vulnerabilities
 
 **Concept:** Weak passwords, unpatched software, and open services increase attack surface.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo grep -E '^[^:]+:[^\!*]' /etc/shadow
 sudo systemctl list-units --type=service --state=running
 ```
 
-📸 *[Screenshot: running services list]*
+ *[Screenshot: running services list]*
 
 - `systemctl` is the main command to manage systemd services on Linux.
 - `list-units` → Lists systemd units (services, sockets, etc.).
 - `--type=service` → Only show services (not timers, sockets, etc.).
 - `--state=running` → Only show services that are currently active and running.
 
-✅ **Purpose:** See which services are currently running on your system.
+ **Purpose:** See which services are currently running on your system.
 
 
 ## Example Output (snippet)
@@ -84,7 +84,7 @@ sudo systemctl list-units --type=service --state=running
 ```
 ---
 
-### 5. 🧪 Commands (RBAC Example)
+### 5.  Commands (RBAC Example)
 ```bash
 sudo groupadd finance
 sudo useradd -G finance ajay
@@ -96,7 +96,7 @@ sudo chmod 770 /secure_finance
 
 ---
 
-## 🌐 6. Network Attacks Overview
+##  6. Network Attacks Overview
 
 **Concept:** Malicious activities like DoS, spoofing, and routing exploitation.
 
@@ -111,11 +111,11 @@ sudo tcpdump -n -i eth0 tcp
 
 ---
 
-## 🌍 6. ICMP and IP Layer Attacks
+##  6. ICMP and IP Layer Attacks
 
 **Concept:** Exploiting trust in network protocols — ARP spoofing, ICMP redirect, etc.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo arp -n
 sudo arping <target-ip>
@@ -124,11 +124,11 @@ sudo arping <target-ip>
 
 ---
 
-## 🔗 7. TCP Layer Attacks
+##  7. TCP Layer Attacks
 
 **Concept:** Exploiting TCP handshake and session trust.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo ss -tnp
 cat /etc/resolv.conf
@@ -139,11 +139,11 @@ Use to inspect active TCP connections and DNS configurations.
 
 ---
 
-## 🚫 8. Denial of Service (DoS/DDoS)
+##  8. Denial of Service (DoS/DDoS)
 
 **Concept:** Exhausts bandwidth or processing power to deny service.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo iftop -i eth0
 sudo tcpdump -c 1000 -w ddos_trace.pcap
@@ -154,11 +154,11 @@ sudo tcpdump -c 1000 -w ddos_trace.pcap
 
 ---
 
-## 🧰 9. Network Hardening and Exposure Minimization
+##  9. Network Hardening and Exposure Minimization
 
 **Concept:** Reduce attack surface by disabling unused services, patching, and auditing.
 
-### 🧪 Commands
+###  Commands
 ```bash
 sudo systemctl disable bluetooth
 sudo apt update && sudo apt upgrade -y
@@ -169,11 +169,11 @@ sudo cat /var/log/auth.log | grep "Failed"
 ```
 Failed password for invalid user admin from 192.168.1.10 port 51234 ssh2
 ```
-📸 *[Screenshot: auth.log failures]*
+ *[Screenshot: auth.log failures]*
 
 ---
 
-## ✅ Summary Checklist
+##  Summary Checklist
 
 | Area | Tool/Command | Purpose |
 |------|---------------|----------|
