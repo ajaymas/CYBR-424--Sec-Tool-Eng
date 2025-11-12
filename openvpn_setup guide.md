@@ -1,4 +1,4 @@
-# Complete OpenVPN Teaching Guide for Undergraduate Students
+# OpenVPN hands-on
 
 ## Table of Contents
 1. [OpenVPN Practical Lab Guide (20 Minutes)](#openvpn-practical-lab-guide)
