@@ -2,8 +2,7 @@
 
 ## Table of Contents
 1. [OpenVPN Practical Lab Guide (20 Minutes)](#openvpn-practical-lab-guide)
-2. [OpenVPN introduction](#openvpn introduction)
-3. [Assessment](#Assessment)
+
 
 ---
 
